@@ -1,0 +1,19 @@
+def swap(li,n):
+    length=len(li)
+    if n%2==0:
+        for i in range(0,length,2):
+            li[i],li[i+1]=li[i+1],li[i]
+    else:
+        for i in range(0,length-1,2):
+            li[i],li[i+1]=li[i+1],li[i]
+def printlist(li,n):
+    for i in range(n):
+        print(li[i],end=" ")
+    print()
+num=int(input())
+for test in range(num):
+    N=int(input())
+    li1=[int(x) for x in input().split()]
+    swap(li1,N)
+    printlist(li1,N)
+    
