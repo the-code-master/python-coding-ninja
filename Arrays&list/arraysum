@@ -1,0 +1,10 @@
+# python-coding-ninja
+## Read input as specified in the question.
+## Print output as specified in the question.
+n=int(input())
+li=[int(x) for x in input().split()]
+sum=0
+for i in range(n):
+    num=li[i]
+    sum=sum+num
+print(sum)    
