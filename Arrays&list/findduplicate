@@ -1,0 +1,15 @@
+n1=int(input())
+i=1
+li2=[]
+while i<=n1:
+    n2=int(input())
+    li=list(int(x) for x in input().split())[0:n2]
+    for ele in li:
+        c=li.count(ele)
+        if c==2:
+            li2.append(ele)
+            break
+    i=i+1
+for i in li2:
+    print(i)
+      
