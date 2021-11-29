@@ -1,0 +1,63 @@
+from sys import stdin
+
+
+def rotate(arr, n, d):
+    for i in range(0,d):
+        arr.append(arr[i])
+    li=[]
+    for j in range(d,len(arr)):
+        li.append(arr[j])   
+    return li   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Taking Input Using Fats I/O
+def takeInput() :
+    n = int(stdin.readline().rstrip())
+    if n == 0:
+        return list(), 0
+
+    arr = list(map(int, stdin.readline().rstrip().split(" ")))
+    return arr, n
+
+
+#to print the array/list 
+def printList(arr, n) : 
+    for i in range(n) :
+        print(arr[i], end = " ")
+    print()
+
+
+#main
+t = int(stdin.readline().rstrip())
+
+while t > 0 :
+    
+    arr, n = takeInput()
+    d = int(stdin.readline().rstrip())
+    li1 = rotate(arr, n, d)
+    printList(li1, n)
+    
+    t -= 1
